@@ -1,0 +1,150 @@
+
+ *:before,
+ *:after {
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+ }
+
+body {
+	background-image: url("../images/background.jpg"); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+ .container {
+ 	margin: 0 auto;
+ 	width: 100%;
+ 	max-width: 1400px;
+ 	padding-left: 15px;
+}
+
+body {
+	color: #C0C0C0;
+	font-family: 'Cinzel', serif;
+}
+
+.topRowOfChars {
+	padding-bottom: 15px;
+	border-bottom: 5px solid #000;
+}
+
+/* This is the main title*/
+
+h1 {
+	font-family: 'Cinzel';
+	font-size: 60px;
+	text-align: center;
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.head {
+       color:white;
+}
+
+/* h2 for the rest of the page*/
+
+h2 {
+	font-size: 27px;
+	color: #C0C0C0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+h3, p {
+	font-size: 27px;
+	text-shadow: 2px 1px #000;
+	margin-bottom: 5px;
+}
+
+h4, h5 {
+	font-size: 17px;
+}
+
+/* character blocks */
+
+.charBlock {
+	border: 3px solid #C0C0C0;
+	display: inline-block;
+	text-align: center;
+	margin: 0px 10px;
+	width: 150px;
+	height: 130px;
+	vertical-align: top;
+	color: silver;
+	padding-top: 5px;
+}
+
+.charImage {
+	width: 120px;
+	height: 85px;
+	border: 1px solid #ffffff;
+	border-radius: 30%;
+}
+/* your Character and Defender rows of fixed height*/
+
+.fixedHeight {
+	height:220px;
+}
+
+.defenderContainer {
+	width: 700px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.enemyContainer {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* attack button*/
+button {
+	font-size: 25px;
+    background-color: white;
+    border: 2px solid #555555;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+html, body {
+	height: 100%;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -20px;
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+.site-footer, .page-wrap:after {
+	height: 20px;
+}
+
+.site-footer {
+	color: #90c1d1;
+
+	line-height: 20px;
+	font-size: 13px;
+	text-align: center;
+
+}

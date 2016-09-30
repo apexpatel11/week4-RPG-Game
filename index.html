@@ -1,73 +1,79 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-	<title>Apexa Patel- GOT RPG!</title>
-  <link rel="stylesheet" type="text/css" href="assests/css/style.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-  <script src="RPG.js" type="text/javascript"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GOT RPG game- Apexa Patel</title>
+	<!-- css -->
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 </head>
-	
+
+<!-- BODY STARTS HERE -->
+
 <body>
+<audio src="assets/images/got-theme.mp3"></audio>
+<div class="container page-wrap">
+<!-- Title -->
+ <h1 class="head">Game Of Throne RPG</h1>
 
-  <div class="wrapper">
-      <h1 class="GOT_RPG">Game Of Throne RPG!</h1>
-      <!-- <audio controls="GOT theme song" type=""></audio> -->
-      <button id= "try" onclick="myFunction()"><strong>Try It!!</strong></button>
-      <script>
-function myFunction() {
-    alert("Thank you for visting! This project is a work in progress. Comming Soon!");
-}
-</script>
-  </div>
-  
-  <div id="row">
-    <h4> Pick your favourite house by clicking any of the boxes below</h4>
-     
-    <div class="HouseCharaters">
-    <div class ="col">
-        <div class="box">
-        <h2>House Stark</h2>
-        <img src="images/HouseStark.jpg" alt="HouseStark" style="width:80px;height:80px;">
-        <h3>100</h3>
-        </div>
-        </div>
-    </div>
+<!-- This is the section where we show all the possibe characters to choose from before the game starts.  Once user chooses Your Character, this section disappears -->
+ <section id="topRowOfChars">
+ <h2>To begin, pick your character</h2>
+ </section>
 
-    <div class ="col">
-        <div class="box">
-         <h2>House Targaryen</h2>
-        <img src="images/HouseTargaryen.jpg" alt="HouseTargaryen" style="width:80px;height:80px;">
-        <h3>100</h3> 
-        </div>
-    </div>
+<!-- This is the section where we show Your Character once user has chosen -->
+ <section class="fixedRow">
+ 	<h2>Your Character</h2>
+ 	<div id="yourCharDiv">
+ 	</div>
+ </section>
 
-    <div class ="col">
-        <div class="box">
-        <h2>House Lannister</h2>
-        <img src="images/HouseLannister.jpg" alt="HouseLannister" style="width:80px;height:80px;">
-        <h3>100</h3>
-        </div>
-    </div>
 
-    <div class ="col">
-        <div class="box">
-        <h2>House Baratheon</h2>
-        <img src="images/HouseBaratheon.png" alt="HouseBaratheon" style="width:80px;height:80px;">
-        <h3>100</h3>
-    </div>
+<!-- This is the section for the fight button -->
+ <section>
+ <h2>Attack Section</h2>
+ <button type="button" id="attackButton"><strong>Attack!</strong></button>
+ </section>
+
+
+<!-- This is the section where we show the Defender once user has chosen, or last remaining character-->
+ <section class="defenderContainer fixedHeight">
+ 	<h2>Defender</h2>
+ 	<div id="defenderDiv"></div>
+</section>
+
+<!-- Section where we show enemies available to attack after user has chosen Your Character-->
+<section class="enemyContainer fixedHeight">
+ 	<h2>Enemies Available to Attack</h2>
+ 	<div id="enemiesDiv">
+	</div>
+</section>
+
+<!-- Section where we show current score -->
+ <div id="scoreDiv">
+ 	<p>You attacked&nbsp;<span class="defenderName"></span>&nbsp;for&nbsp;<span id="defenderDamage"></span>&nbsp;damage.</p>
+ 	<p><span class="defenderName"></span>&nbsp;attacked you back for&nbsp;<span id="yourDamage"></span>&nbsp;damage.</p>
+</div>
+ 	
+ 	
+ <div id="gameResult">
+ 	<h3></h3>
+	<button type="button" id="restartButton">Restart</button>
+ </div>
 </div>
 
-<button id= "attack"><strong>Attack</strong></button>
+<!-- footer -->
 
+	<footer class="site-footer">
+		&copy; Copyright 2016 Apexa patel
+	</footer>
 
-
- 
-
-
-
-
-
-
+<!-- js file -->
+	<script type="text/javascript" src="assets/javascript/rpg.js"></script>
 </body>
 </html>
